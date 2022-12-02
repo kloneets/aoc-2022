@@ -7,7 +7,7 @@ import (
 	"koko.lv/aoc"
 )
 
-func main() {
+func aoc01() {
 	calorieMap := aoc.FileLines("inputs/011")
 
 	totalCalories := 0
@@ -23,11 +23,9 @@ func main() {
 			n, _ := strconv.Atoi(v)
 			totalCalories += n
 		}
-		if totalCalories > totalMax {
-			totalMax = totalCalories
-		}
-
 	}
-	fmt.Println("Max calories:", totalMax)
-
+	if totalCalories > totalMax {
+		totalMax = totalCalories
+	}
+	fmt.Println("1. day. Max calories:", totalMax)
 }
