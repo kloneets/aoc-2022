@@ -7,7 +7,7 @@ import (
 	"koko.lv/aoc"
 )
 
-func aoc02() {
+func aoc011() {
 	calorieMap := aoc.FileLines("inputs/011")
 
 	totalCalories := 0
@@ -15,6 +15,7 @@ func aoc02() {
 	secondMax := 0
 	thirdMax := 0
 
+	// lazy hard code.. It can be done universally, but who cares?
 	for _, v := range calorieMap {
 		if v == "" {
 			if totalMax < totalCalories {
@@ -41,6 +42,6 @@ func aoc02() {
 	} else if thirdMax < totalCalories {
 		thirdMax = totalCalories
 	}
-	fmt.Println("2. day. Three maxes:", totalMax+secondMax+thirdMax)
+	fmt.Println("Day 1, part 2. Three maxes:", totalMax+secondMax+thirdMax)
 
 }

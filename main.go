@@ -1,6 +1,6 @@
 package main
 
 func main() {
-	aoc01()
-	aoc02()
+	aoc010()
+	aoc011()
 }
