@@ -18,5 +18,10 @@ func ReadFile(fileName string) string {
 }
 
 func FileLines(fileName string) []string {
-	return strings.Split(strings.ReplaceAll(ReadFile(fileName), "\r\n", "\n"), "\n")
+	data := strings.Split(strings.ReplaceAll(ReadFile(fileName), "\r\n", "\n"), "\n")
+	if data[len(data)-1] == "" { //remove empty line if exists
+		data = data[:len(data)-1]
+	}
+
+	return data
 }

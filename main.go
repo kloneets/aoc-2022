@@ -5,4 +5,5 @@ func main() {
 	aoc011()
 	aoc020()
 	aoc03()
+	aoc04()
 }
